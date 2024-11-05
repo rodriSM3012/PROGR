@@ -29,7 +29,7 @@ public class Cpr2_4 {
             System.out.printf("La temperatura son %.2fºC.", temp);
         else if (temp == 0)
             System.out.println("La temperatura es de 0ºC.");
-        else if (temp < 0)
+        else
             System.out.printf("La temperatura son %.2fºC bajo cero", Math.sqrt(temp * temp)); // Math.abs(temp)
 
         teclado.close();
