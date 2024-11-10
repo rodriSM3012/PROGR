@@ -25,21 +25,21 @@ public class cpr2_5 {
         if (p2.equals("a")) {
             System.out.print("Introduce cuántos km/h ha acelerado el coche: ");
             acel = teclado.nextDouble();
-            coche1.acelerar(acel);
+            // coche1.acelerar(acel);
         } else {
             System.out.print("Introduce cuántos km/h ha frenado el coche: ");
             fren = teclado.nextDouble();
-            coche1.frenar(fren);
+            // coche1.frenar(fren);
         }
 
         System.out.printf("Coche de marca %s y de color %s.\n", marca, color);
         System.out.print("La velocidad del coche después de ");
         if (p2.equals("a")) {
-            velocidad = coche1.acelerar(acel);
-            System.out.printf("acelerar es de %.2f km/h\n", velocidad);
+            // velocidad = coche1.acelerar(acel);
+            System.out.printf("acelerar es de %.2f km/h\n", coche1.acelerar(acel));
         } else {
-            velocidad = coche1.frenar(fren);
-            System.out.printf("frenar es de %.2f km/h\n", velocidad);
+            // velocidad = coche1.frenar(fren);
+            System.out.printf("frenar es de %.2f km/h\n", coche1.frenar(fren));
         }
 
         teclado.close();

@@ -19,36 +19,36 @@ public class Coche {
     }
 
     // getters y setters
-    public static String getMarca() {
+    public String getMarca() {
         return marca;
     }
 
-    public static String getColor() {
+    public String getColor() {
         return color;
     }
 
-    public static double getVelocidad() {
+    public double getVelocidad() {
         return velocidad;
     }
 
-    public static void setMarca(String marca) {
+    public void setMarca(String marca) {
         Coche.marca = marca;
     }
 
-    public static void setColor(String color) {
+    public void setColor(String color) {
         Coche.color = color;
     }
 
-    public static void setVelocidad(double velocidad) {
+    public void setVelocidad(double velocidad) {
         Coche.velocidad = velocidad;
     }
 
     // metodos
     public double acelerar(double acel) {
-        return velocidad =+ acel;
+        return velocidad = velocidad + acel;
     }
 
     public double frenar(double fren) {
-        return velocidad =- fren;
+        return velocidad = velocidad - fren;
     }
 }
