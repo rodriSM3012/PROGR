@@ -11,21 +11,21 @@ package b2_2ejerc2;
  */
 public class MiNumero {
     // atributos
-    private static int n;
-
-    // constructor por defecto
-    public MiNumero() {
-        n = 2;
-    }
-
-    // constructor por parametros
-    public MiNumero(int newN) {
-        n = newN;
-    }
-
-    // setters
-    public void setN(int newN) {
-        n = newN;
+    private int n;
+    
+        // constructor por defecto
+        public MiNumero() {
+            n = 2;
+        }
+    
+        // constructor por parametros
+        public MiNumero(int n) {
+            this.n = n;
+        }
+    
+        // setters
+        public void setN(int n) {
+            this.n = n;
     }
 
     // getters
