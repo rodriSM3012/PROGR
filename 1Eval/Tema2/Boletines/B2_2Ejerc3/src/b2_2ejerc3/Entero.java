@@ -23,19 +23,19 @@ public class Entero {
     }
 
     // metodos
-    public static int add(int n1, int n2) {
+    public int add(int n1, int n2) {
         return n1 + n2;
     }
 
-    public static int resta(int n1, int n2) {
+    public int resta(int n1, int n2) {
         return n1 - n2;
     }
 
-    public static int getDoble() {
+    public int getDoble() {
         return 2 * n;
     }
 
-    public static int getTriple() {
+    public int getTriple() {
         return 3 * n;
     }
 }
