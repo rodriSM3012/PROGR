@@ -34,11 +34,11 @@ public class Peso {
 
     // metodos
     public double getLibras() {
-        return this.masa / 2.20462;
+        return this.masa * 2.20462;
     }
 
     public double getLingotes() {
-        return this.masa * 12.44;
+        return this.masa / 12.44;
     }
 
     public double getPeso(double masa, String tipoMedida) {
@@ -50,18 +50,16 @@ public class Peso {
         // 1 gramo (g) = 0.001 kg
         // 1 quintal métrico = 100 kg
         if (tipoMedida.equals("Lb"))
-            return masa * 0.453592;
+            return masa / 0.453592;
         else if (tipoMedida.equals("Li"))
-            return masa * 12.44;
+            return masa / 12.44;
         else if (tipoMedida.equals("Oz"))
-            return masa * 0.0283495;
+            return masa / 0.0283495;
         else if (tipoMedida.equals("P"))
-            return masa * 0.00189;
+            return masa / 0.00189;
         else if (tipoMedida.equals("G"))
-            return masa * 0.001;
-        else if (tipoMedida.equals("Q"))
-            return masa * 100;
-        else
-            return -1;
+            return masa / 0.001;
+        else //(tipoMedida.equals("Q"))
+            return masa / 100;
     }
 }
