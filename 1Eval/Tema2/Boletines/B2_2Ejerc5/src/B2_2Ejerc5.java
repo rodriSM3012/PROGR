@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class test {
+public class B2_2Ejerc5 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         Distancia d1;
