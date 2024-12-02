@@ -8,11 +8,11 @@ public class Restaurante {
         this.kgPapas = 0;
     }
 
-    public Restaurante(double kgChocos, double kgPapas) {        
+    public Restaurante(double kgChocos, double kgPapas) {
         this.kgChocos = kgChocos;
         this.kgPapas = kgPapas;
     }
-    
+
     // getters y setters
     public double getKgPapas() {
         return kgPapas;
@@ -31,7 +31,7 @@ public class Restaurante {
     }
 
     // metodos
-    public int numClientesPosibles() {
+    public int getComensales() {
         // variables necesarias para guardar los numeros y compararlos
         int aux;
         int nP = (int) kgPapas / 3;
@@ -44,6 +44,22 @@ public class Restaurante {
             return nP;
         else
             return aux;
+    }
+
+    public void addChocos(double x) {
+        this.kgChocos += x;
+    }
+
+    public void addPapas(double x) {
+        this.kgPapas += x;
+    }
+
+    public void showChocos() {
+        System.out.printf("Hay un total de %.2f kg de chocos.\n", this.kgChocos);
+    }
+
+    public void showPapas() {
+        System.out.printf("Hay un total de %.2f kg de papas.\n", this.kgPapas);
     }
 
 }
