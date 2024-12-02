@@ -27,8 +27,10 @@ public class B2_2Ejerc7 {
 
         // OUTPUT
         System.out.printf("\nTiempo empleado en realizar el viaje: %.2f horas\n" +
-                          "Consumo medio de litros por cada 100 km: %.2f litros/100km\n" +
-                          "Consumo en euros por cada 100 km: %.2f €/100km\n",
-                          coche1.getTiempo(), coche1.consumoMedio(), coche1.consumoEuros());
+                "Consumo medio de litros por cada 100 km: %.2f litros/100km\n" +
+                "Consumo en euros por cada 100 km: %.2f €/100km\n",
+                coche1.getTiempo(), coche1.consumoMedio(), coche1.consumoEuros());
+
+        teclado.close();
     }
 }
