@@ -11,8 +11,8 @@ public class B3_3Ejerc2 {
             suma += i;
             i += 3;
         }
-
-        System.out.println(i);
+        
+        System.out.println(suma);
 
         // do-while
         i = 2;
@@ -24,14 +24,16 @@ public class B3_3Ejerc2 {
             i += 3;
         } while (i < 100);
 
-        System.out.println(i);
+        System.out.println(suma);
 
         // for
+        suma = 0;
+
         System.out.println("Bucle for:");
         for (i = 2; i < 100; i += 3) {
             suma += i;
         }
 
-        System.out.println(i);
+        System.out.println(suma);
     }
 }
