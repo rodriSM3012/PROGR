@@ -17,7 +17,8 @@ public class B3_3Ejerc6 {
             // suma += x;
         }
 
-        System.out.print("La suma de todos lo valores que has introducido equivale a " + x + ".");
+        // System.out.println("La suma de todos los valores que has introducido equivale a " + x + ".");
+        System.out.print("La media de todos los valores equivale a " + ((double) x / 5) + ".\n");
 
         teclado.close();
     }
