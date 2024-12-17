@@ -11,6 +11,12 @@ public class B3_3Ejerc7 {
                 " (la sucesión termina en cuanto introduzcas un 0): ");
         x = teclado.nextInt();
 
+        if (x == 0) {
+            System.out.println("No has introducido ningún número para realizar una media.");
+            teclado.close();
+            return;
+        }
+
         while (x != 0) {
             System.out.print("Introduce el siguiente número: ");
             x = teclado.nextInt();
@@ -18,8 +24,13 @@ public class B3_3Ejerc7 {
             i++;
         }
 
-        System.out.printf("La media de los %d números que has introducido equivale a %.2f.",
-                i, ((double) suma / i));
+        // para saltar la division entre 1 si solo se introdujo 1 unico numero
+        if (i == 1)
+            System.out.println("Ya que sólo has introducido un único número," +
+                    " la media sería el mismo número, o sea " + x);
+        else
+            System.out.printf("La media de los %d números que has introducido equivale a %.2f\n",
+                    i, ((double) suma / i));
 
         teclado.close();
     }
