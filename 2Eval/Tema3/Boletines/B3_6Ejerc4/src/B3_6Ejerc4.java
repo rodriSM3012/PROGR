@@ -10,10 +10,13 @@ public class B3_6Ejerc4 {
         System.out.print("Introduce el primer número: ");
         n1 = teclado.nextInt();
         n1 = comprobar(n1, teclado);
+        // int n1 = comprobar(teclado.nextInt(), teclado)
         System.out.print("Introduce el segundo número: ");
         n2 = teclado.nextInt();
         n2 = comprobar(n2, teclado);
+        // int n2 = comprobar(teclado.nextInt(), teclado)
         System.out.printf("%d x %d = %d\n", n1, n2, productoPorSumas(n1, n2));
+        teclado.close();
     }
 
     public static int comprobar(int n, Scanner teclado) {

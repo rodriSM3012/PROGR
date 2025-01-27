@@ -15,8 +15,10 @@ public class B3_6Ejerc2 {
             System.out.print("Introduce el número en posición " + i + " en la secuencia: ");
             n = teclado.nextInt();
             n = comprobarIntPosit(n, teclado);
-            if (n > nInicial)
+            if (n > nInicial) {
                 cont++;
+                System.out.println("El número " + n + " es mayor que " + nInicial + ".");
+            }
         }
 
         System.out.println(
