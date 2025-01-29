@@ -5,7 +5,7 @@ public class cpr6_2 {
         // al usar StringBuilder no hace falta cad = cad.delete()
         cad.delete(6, 8); // el primero es inclusive y el segundo no
 
-        cad.append('!'); // añade un caracter al final
+        cad.append('!'); // añade un caracter o String al final
         // cad.insert(cad.length(), '!'); // seria como el append pero con insert
         cad.insert(0, '¡');
 
