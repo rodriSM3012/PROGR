@@ -4,7 +4,7 @@ public class B6_1Ejerc3 {
     public static void main(String[] args) {
         StringBuilder password = new StringBuilder("1234");
         Scanner teclado = new Scanner(System.in);
-        String cad1, cad2;
+        String cad1;
         int n;
 
         System.out.print("Introduce una cadena de caracteres: ");
@@ -22,28 +22,19 @@ public class B6_1Ejerc3 {
 
             switch (n) {
                 case 1:
-                    if (cad1.equals(password.toString())) {
-                        System.out.println("\nLa cadena introducida coincide con la contraseña.");
-                    } else {
-                        System.out.println("\nLa cadena introducida no coincide con la contraseña.");
-                    }
+                    checkPassword(cad1, password);
                     break;
                 case 2:
-                    System.out.println("\nLa longitud de la cadena es de " + cad1.length() + " caracteres.");
+                    longitud(cad1);
                     break;
                 case 3:
-                    System.out.print("\nIntroduce otra cadena: ");
-                    cad2 = teclado.nextLine();
-                    if (cad1.length() > cad2.length()) {
-                        System.out.println("La primera cadena es más larga que la segunda.");
-                    } else if (cad1.length() == cad2.length()) {
-                        System.out.println("Ambas cadenas tienen la misma longitud.");
-                    } else {
-                        System.out.println("La segunda cadena es más larga que la primera.");
-                    }
+                    cadMasLarga(cad1, teclado);
+                    break;
                 case -1:
                     System.out.println("\nFinalizando programa.");
+                    break;
                 default:
+                    break;
             }
             System.out.print("Pulsa 'Enter' para continuar.");
             teclado.nextLine();
@@ -59,5 +50,32 @@ public class B6_1Ejerc3 {
             n = teclado.nextInt();
         }
         return n;
+    }
+
+    // opcion 1
+    public static void checkPassword(String cad1, StringBuilder password) {
+        if (cad1.equals(password.toString())) {
+            System.out.println("\nLa cadena introducida coincide con la contraseña.");
+        } else {
+            System.out.println("\nLa cadena introducida no coincide con la contraseña.");
+        }
+    }
+
+    // opcion 2
+    public static void longitud(String cad1) {
+        System.out.println("\nLa longitud de la cadena es de " + cad1.length() + " caracteres.");
+    }
+
+    // opcion 3
+    public static void cadMasLarga(String cad1, Scanner teclado) {
+        System.out.print("\nIntroduce otra cadena: ");
+        String cad2 = teclado.nextLine();
+        if (cad1.length() > cad2.length()) {
+            System.out.println("La primera cadena es más larga que la segunda.");
+        } else if (cad1.length() == cad2.length()) {
+            System.out.println("Ambas cadenas tienen la misma longitud.");
+        } else {
+            System.out.println("La segunda cadena es más larga que la primera.");
+        }
     }
 }
