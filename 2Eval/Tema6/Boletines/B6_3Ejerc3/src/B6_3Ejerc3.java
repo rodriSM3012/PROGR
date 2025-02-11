@@ -13,12 +13,18 @@ public class B6_3Ejerc3 {
             int aux = 0;
             System.out.print("Introduce el número en posición " + (i + 1) + ": ");
             aux = teclado.nextInt();
-            if (aux == 0)
+            if (aux == 0) {
+                teclado.close();
                 break;
+            }
             array[i] = aux;
         }
         mostrarArray(array);
-        System.out.println("Media: " + calcularMediaArray(array, i));
+        if (i == 0) {
+            System.out.println("No es posible hacer la media ya que no se ha introducido ningún valor.");
+        } else {
+            System.out.println("Media: " + calcularMediaArray(array, i));
+        }
         teclado.close();
     }
 
