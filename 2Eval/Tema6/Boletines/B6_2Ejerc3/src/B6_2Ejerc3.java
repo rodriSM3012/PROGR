@@ -7,7 +7,7 @@ public class B6_2Ejerc3 {
     public static boolean comprobarEntero(String cad) {
         // -? indica que puede ser negativo (empezar por -) o no (?)
         // [0-9] es el rango de valores que pueden tomar los caracteres
-        // si hubiese '.' como en un numero decimal, retornaria false
+        // si hubiese '.' como en un numero decimal, retornaría false
         // + indica que pueden haber varias ocurrencias
         Pattern p = Pattern.compile("^-?[0-9]+$");
         Matcher m = p.matcher(cad);
@@ -30,7 +30,7 @@ public class B6_2Ejerc3 {
 
     // D. Un DNI con 8 números y una letra al final.
     public static boolean comprobarDNI(String cad) {
-        // lo que va entre {} indica la longitud de la seccion con los caracteres entre
+        // lo que va entre {} indica la longitud de la sección con los caracteres entre
         // []
         Pattern p = Pattern.compile("^[0-9]{8}[A-Za-z]$");
         Matcher m = p.matcher(cad);
@@ -167,8 +167,13 @@ public class B6_2Ejerc3 {
     // public static boolean comprobar
 
     // P. Una fecha con formato dd/mm/aaaa.
-    // public static boolean comprobarFecha(String cad) {
-    // }
+    public static boolean comprobarFecha(String cad) {
+        Pattern p = Pattern.compile("^[0123][0-9][/][01][0-9][/][0-9]{4}$");
+        // Pattern p =
+        // Pattern.compile("^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})$");
+        Matcher m = p.matcher(cad);
+        return m.matches();
+    }
 
     // Q. Un nombre, incluyendo nombres compuestos.
     // public static boolean comprobar
@@ -177,10 +182,10 @@ public class B6_2Ejerc3 {
     // public static boolean comprobar
 
     // S. Un nombre de usuario en twitter, empieza por @ y puede contener letras
-    // mayusculas y minusculas, numeros, guiones y guiones bajos.
+    // mayúsculas y minúsculas, números, guiones y guiones bajos.
     // public static boolean comprobar
 
-    // T. Un ISBN de 13 digitos que siempre empieza en 978 o 979.
+    // T. Un ISBN de 13 dígitos que siempre empieza en 978 o 979.
     // public static boolean comprobar
 
     public static boolean comprobarLetraString(char c) {
