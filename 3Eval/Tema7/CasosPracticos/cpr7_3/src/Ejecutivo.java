@@ -8,8 +8,8 @@ public class Ejecutivo extends Empleado {
         setPresupuesto(0);
     }
 
-    public Ejecutivo(String nombre, int numEmpleado, double sueldo, double presupuesto) {
-        super(nombre, numEmpleado, sueldo);
+    public Ejecutivo(String nombre, double sueldo, double presupuesto) {
+        super(nombre, sueldo);
         setPresupuesto(presupuesto);
     }
 
@@ -24,6 +24,6 @@ public class Ejecutivo extends Empleado {
 
     @Override
     public String toString() {
-        return "Ejecutivo [presupuesto=" + presupuesto + "]";
+        return super.toString() + "Ejecutivo [presupuesto=" + presupuesto + "]";
     }
 }

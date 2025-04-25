@@ -3,6 +3,7 @@ public class Empleado {
     public String nombre;
     public int numEmpleado;
     public double sueldo;
+    static private int cont = 0;
 
     // constructores
     public Empleado() {
@@ -11,10 +12,10 @@ public class Empleado {
         setSueldo(1000);
     }
 
-    public Empleado(String nombre, int numEmpleado, double sueldo) {
+    public Empleado(String nombre, double sueldo) {
         setNombre(nombre);
-        setNumEmpleado(numEmpleado);
         setSueldo(sueldo);
+        numEmpleado = ++cont; // hace el incremento antes de hacer la operacion
     }
 
     // metodos
@@ -42,9 +43,13 @@ public class Empleado {
         this.sueldo = sueldo;
     }
 
-    @Override
-    public String toString() {
-        return "Empleado [nombre=" + nombre + ", numEmpleado=" + numEmpleado + ", sueldo=" + sueldo + "]";
+    // metodo para aumentar sueldo a los empleados
+    public void aumentarSueldo(double porcentajeAumento) {
+        this.sueldo = this.sueldo + ((this.sueldo * porcentajeAumento) / 100);
     }
 
+    @Override
+    public String toString() {
+        return "Empleado [numEmpleado=" + numEmpleado + ", nombre=" + nombre + ", sueldo=" + sueldo + "]";
+    }
 }
