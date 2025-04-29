@@ -1,4 +1,4 @@
-public class _cpr7_2 {
+public class cpr7_2 {
     public static void main(String[] args) {
         Alumno alumno1 = new Alumno("Sofía", "García", "López", "+34 612 345 678", 1, "DAW");
         Alumno alumno2 = new Alumno("Lucas", "Fernández", "González", "+34 644 987 654", 2, "MKT");
