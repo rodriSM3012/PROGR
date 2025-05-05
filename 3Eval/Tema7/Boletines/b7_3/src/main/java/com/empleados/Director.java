@@ -25,6 +25,9 @@ public class Director extends Empleado {
 
     @Override
     public String toString() {
-        return "Director [dietas=" + dietas + "]";
+        String datos = super.toString();
+        datos += String.format("\n %-20s %s", "Dietas:", dietas);
+
+        return datos;
     }
 }

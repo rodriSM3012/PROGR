@@ -3,7 +3,7 @@ package com.empleados;
 public class Informatico extends Empleado {
     // atributos
     private String departamento;
-    
+
     // constructores
     public Informatico() {
         this.departamento = ("N/S");
@@ -25,6 +25,9 @@ public class Informatico extends Empleado {
 
     @Override
     public String toString() {
-        return "Informatico [departamento=" + departamento + "]";
-    }  
+        String datos = super.toString();
+        datos += String.format("\n %-20s %s", "Departamento:", departamento);
+
+        return datos;
+    }
 }

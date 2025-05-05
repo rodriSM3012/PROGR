@@ -56,6 +56,18 @@ public class Empleado {
 
     @Override
     public String toString() {
-        return "Empleado [nombre=" + nombre + ", cargo=" + cargo + ", edad=" + edad + ", sueldo=" + sueldo + "]";
+        // return String.format("\nNombre:\t\t" + this.nombre +
+        // "\nCargo: \t\t" + this.cargo +
+        // "\nEdad: \t\t" + this.edad +
+        // "\nSueldo:\t\t" + this.sueldo);
+
+        String datos = String.format("\n %-20s %s", "Nombre:", nombre);
+        // %-10s → reserva espacio y se va a usar para "Nombre" y lo que no se use
+        // quedara vacio
+        datos += String.format("\n %-20s %s", "Edad:", edad);
+        datos += String.format("\n %-20s %s", "Cargo:", cargo);
+        datos += String.format("\n %-20s %.0f", "Sueldo:", sueldo);
+
+        return datos;
     }
 }

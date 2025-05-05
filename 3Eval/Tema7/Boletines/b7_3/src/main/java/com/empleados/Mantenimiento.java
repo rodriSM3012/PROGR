@@ -36,6 +36,10 @@ public class Mantenimiento extends Empleado {
 
     @Override
     public String toString() {
-        return "Mantenimiento [horasExtra=" + horasExtra + ", precioHorasExtra=" + precioHorasExtra + "]";
+        String datos = super.toString();        
+        datos += String.format("\n %-20s %s", "Horas extra:", horasExtra);
+        datos += String.format("\n %-20s %.2f", "Precio horas extra:", precioHorasExtra);
+
+        return datos;
     }
 }
